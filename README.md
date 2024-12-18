@@ -1,127 +1,121 @@
-# 🚀 مشروع MVC و ORM
+# 🚀 MVC and ORM Project
 
-## 💡 مقدمة
+## 💡 Introduction
 
-هذا المشروع هو محاولة 👨‍💻 لتعلم وبناء بنية **MVC (Model-View-Controller)**  بسيطة واستخدام **ORM (Object-Relational Mapping)** من مكتبة **Laravel**. يهدف المشروع إلى توفير إطار عمل أساسي 💪 لتطوير تطبيقات الويب بطريقة منظمة وسهلة الصيانة.
+This project is a practical exercise 👨‍💻 in learning and building a simple **MVC (Model-View-Controller)** architecture and utilizing **ORM (Object-Relational Mapping)** from the **Laravel** framework. It aims to provide a solid foundation 💪 for developing web applications in a structured and maintainable manner.
 
-## 📂 بنية المشروع
+## 📂 Project Structure
 
-تم تنظيم المشروع باتباع نمط **MVC**، حيث يتم فصل منطق التطبيق (**Model**) عن واجهة المستخدم (**View**) وطريقة التحكم (**Controller**). كما تم استخدام **ORM** من **Laravel** لتبسيط التفاعل مع قاعدة البيانات.
+The project adheres to the **MVC** pattern, effectively separating application logic (**Model**) from the user interface (**View**) and control flow (**Controller**). Database interactions are simplified using **Laravel's ORM**.
 
-C:.
-│   .htaccess
-│   composer.json
-│   composer.lock
-│   env.php
-│   index.php
-│   LICENSE
-│   README.md
-│
-├───src
-│   │   bootstrap.php
-│   │
-│   ├───Controllers 🎮
-│   │       helpers.php
-│   │       UserController.php
-│   │
-│   ├───Models 🗃️
-│   │       Role.php
-│   │       User.php
-│   │
-│   └───views 👁️
-│       │   home.php
-│       │
-│       └───users
-│               create.php
-│               index.php
-│
-├───start ▶️
-│       error_log
-│       install.php
-│       readme.txt
-│
-└───test 🧪
-test.php
-test2.php
+.
+├── .htaccess
+├── composer.json
+├── composer.lock
+├── env.php
+├── index.php
+├── LICENSE
+├── README.md
+├── src
+│   ├── bootstrap.php
+│   ├── Controllers 🎮
+│   │   ├── helpers.php
+│   │   └── UserController.php
+│   ├── Models 🗃️
+│   │   ├── Role.php
+│   │   └── User.php
+│   └── views 👁️
+│       ├── home.php
+│       └── users
+│           ├── create.php
+│           └── index.php
+├── start ▶️
+│   ├── error_log
+│   ├── install.php
+│   └── readme.txt
+└── test 🧪
+├── test.php
+└── test2.php
 
 
-### 📝 شرح المجلدات والملفات
+### 📝 Explanation of Folders and Files
 
-*   `.htaccess`:  يستخدم هذا الملف لتكوين إعدادات خادم **Apache**، مثل إعادة توجيه الطلبات إلى `index.php`.
-*   `composer.json`:  يحتوي على تبعيات المشروع، مثل مكتبة **Laravel**.
-*   `composer.lock`:  يحتوي على قائمة دقيقة بإصدارات التبعيات المثبتة.
-*   `env.php`:  يحتوي على إعدادات البيئة، مثل معلومات الاتصال بقاعدة البيانات.
-*   `index.php`:  نقطة الدخول الرئيسية للتطبيق.
-*   `LICENSE`:  ملف يحتوي على رخصة المشروع.
-*   `README.md`:  هذا الملف، الذي يصف المشروع ويقدم تعليمات حول كيفية استخدامه.
-*   `src`:  يحتوي على الكود المصدري للتطبيق.
-    *   `bootstrap.php`:  يُستخدم لتهيئة التطبيق، مثل تحميل التبعيات وإعداد الاتصال بقاعدة البيانات.
-    *   `Controllers` 🎮:  يحتوي على وحدات التحكم (**Controllers**) التي تدير التفاعلات بين المستخدم و التطبيق.
-        *   `helpers.php`:  يحتوي على وظائف مساعدة يمكن استخدامها في جميع أنحاء التطبيق.
-        *   `UserController.php`:  مثال لوحدة تحكم تدير المستخدمين.
-    *   `Models` 🗃️:  يحتوي على النماذج (**Models**) التي تمثل البيانات في التطبيق.
-        *   `Role.php`:  نموذج يمثل دور المستخدم.
-        *   `User.php`:  نموذج يمثل المستخدم.
-    *   `views` 👁️:  يحتوي على القوالب (**Views**) التي تعرض واجهة المستخدم.
-        *   `home.php`:  مثال لصفحة رئيسية.
-        *   `users`:  يحتوي على القوالب الخاصة بالمستخدمين.
-            *   `create.php`:  نموذج لإنشاء مستخدم جديد.
-            *   `index.php`:  عرض قائمة المستخدمين.
-*   `start` ▶️:  يحتوي على ملفات بدء التشغيل.
-    *   `error_log`:  ملف لتسجيل الأخطاء.
-    *   `install.php`:  ملف لتثبيت المشروع وإعداد قاعدة البيانات.
-    *   `readme.txt`:  ملف يحتوي على تعليمات بدء التشغيل.
-*   `test` 🧪:  يحتوي على ملفات الاختبار.
-    *   `test.php`:  ملف اختبار.
-    *   `test2.php`:  ملف اختبار.
+*   `.htaccess`: Configures **Apache** server settings, such as redirecting requests to `index.php`.
+*   `composer.json`: Defines project dependencies, including the **Laravel** framework.
+*   `composer.lock`: Contains precise versions of installed dependencies.
+*   `env.php`: Holds environment settings, such as database connection details.
+*   `index.php`: The main entry point for the application.
+*   `LICENSE`: The project's license file.
+*   `README.md`: This file, providing a project overview and usage instructions.
+*   `src`: Houses the application's source code.
+    *   `bootstrap.php`: Initializes the application, loads dependencies, and sets up the database connection.
+    *   `Controllers` 🎮: Contains **Controllers** that handle user interactions and application logic.
+        *   `helpers.php`: Provides utility functions used throughout the application.
+        *   `UserController.php`: An example controller for managing users.
+    *   `Models` 🗃️: Contains **Models** representing the application's data.
+        *   `Role.php`: Represents a user role.
+        *   `User.php`: Represents a user.
+    *   `views` 👁️: Contains **Views** responsible for the user interface.
+        *   `home.php`: An example of a home page.
+        *   `users`: Templates related to users.
+            *   `create.php`: A form for creating new users.
+            *   `index.php`: Displays a list of users.
+*   `start` ▶️: Contains startup scripts.
+    *   `error_log`: Logs application errors.
+    *   `install.php`: Sets up the project, including the database.
+    *   `readme.txt`: Contains initial startup instructions.
+*   `test` 🧪: Contains test files.
+    *   `test.php`: A general test file.
+    *   `test2.php`: Another test file.
 
-## ✅ المتطلبات
+## ✅ Requirements
 
-*   **PHP 7.4** أو أحدث
+*   **PHP 7.4** or later
 *   **Composer**
-*   خادم ويب (مثل **Apache** أو **Nginx**)
-*   قاعدة بيانات (مثل **MySQL** أو **PostgreSQL**)
+*   A web server (e.g., **Apache** or **Nginx**)
+*   A database (e.g., **MySQL** or **PostgreSQL**)
 
-## ⬇️ التثبيت
+## ⬇️ Installation
 
-1.  استنسخ المستودع:
+1.  Clone the repository:
 
     ```bash
-    git clone <repository_url>
+    git clone [https://github.com/okbach/MVC.git](https://github.com/okbach/MVC.git)
     ```
-2.  ثبت التبعيات باستخدام **Composer**:
+2.  Install dependencies via **Composer**:
 
     ```bash
     composer install
     ```
-3.  انسخ `env.php.example` إلى `env.php` وقم بتكوين إعدادات البيئة الخاصة بك، بما في ذلك إعدادات قاعدة البيانات.
-4.  قم بتشغيل `install.php` لإعداد قاعدة البيانات:
+3.  Rename `env.php.example` to `env.php` and configure your environment settings, especially the database connection details.
+4.  Execute `install.php` to set up the database:
 
     ```bash
     php start/install.php
     ```
 
-## ▶️ الاستخدام
+## ▶️ Usage
 
-1.  ابدأ تشغيل خادم التطوير المحلي:
+1.  Launch the local development server:
 
     ```bash
     php -S localhost:8000
     ```
-2.  افتح متصفح الويب وانتقل إلى `http://localhost:8000`.
+2.  Open your web browser and navigate to `http://localhost:8000`.
 
-## 🤝 المساهمة
+## 🤝 Contributing
 
-نرحب بالمساهمات في هذا المشروع. يرجى اتباع الخطوات التالية:
+Contributions are welcome! Please follow these steps:
 
-1.  قم بإنشاء فرع جديد (**Fork**) من المستودع.
-2.  قم بإجراء التغييرات الخاصة بك.
-3.  قم بإرسال طلب سحب (**Pull Request**).
+1.  Fork the repository.
+2.  Create a new branch for your feature.
+3.  Commit your changes with clear descriptions.
+4.  Submit a pull request.
 
-## 📜 الترخيص
+## 📜 License
 
-هذا المشروع مرخص بموجب رخصة **MIT**. يرجى الاطلاع على ملف `LICENSE` لمزيد من التفاصيل.
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
-## 🙏 شكر وتقدير
+## 🙏 Acknowledgements
 
-نشكر مطوري **Laravel** على مكتبتهم الرائعة.
+Special thanks to the **Laravel** developers for their excellent framework.
