@@ -45,8 +45,6 @@ The project adheres to the **MVC** pattern, effectively separating application l
 *   `composer.lock`: Contains precise versions of installed dependencies.
 *   `env.php`: Holds environment settings, such as database connection details.
 *   `index.php`: The main entry point for the application.
-*   `LICENSE`: The project's license file.
-*   `README.md`: This file, providing a project overview and usage instructions.
 *   `src`: Houses the application's source code.
     *   `bootstrap.php`: Initializes the application, loads dependencies, and sets up the database connection.
     *   `Controllers` 🎮: Contains **Controllers** that handle user interactions and application logic.
@@ -87,8 +85,7 @@ The project adheres to the **MVC** pattern, effectively separating application l
     ```bash
     composer install
     ```
-3.  Rename `env.php.example` to `env.php` and configure your environment settings, especially the database connection details.
-4.  Execute `install.php` to set up the database:
+3.  Execute `install.php` to set up the database:
 
     ```bash
     php start/install.php
