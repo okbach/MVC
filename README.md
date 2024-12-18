@@ -7,7 +7,7 @@ This project is a practical exercise 👨‍💻 in learning and building a simp
 ## 📂 Project Structure
 
 The project adheres to the **MVC** pattern, effectively separating application logic (**Model**) from the user interface (**View**) and control flow (**Controller**). Database interactions are simplified using **Laravel's ORM**.
-
+```bash
 .
 ├── .htaccess
 ├── composer.json
@@ -36,7 +36,7 @@ The project adheres to the **MVC** pattern, effectively separating application l
 └── test 🧪
 ├── test.php
 └── test2.php
-
+```
 
 ### 📝 Explanation of Folders and Files
 
@@ -116,6 +116,4 @@ Contributions are welcome! Please follow these steps:
 
 This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
-## 🙏 Acknowledgements
 
-Special thanks to the **Laravel** developers for their excellent framework.
